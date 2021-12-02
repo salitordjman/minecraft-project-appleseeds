@@ -1,0 +1,17 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.zzzz{
+
+  width: 50vw;
+  height: 98vh;
+  display: grid;
+  background: #8DBFFF;
+  grid-template-rows: repeat(20, 1fr);
+  grid-template-columns: repeat(20, 1fr);
+}
+.snake {
+  background-color: hsl(123, 50%, 51%);
+}
