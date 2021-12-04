@@ -27,13 +27,8 @@ section{
 .cloud {
   background-color: white;
 }
-.ground{  
-  background-image: url(./img/ground.jpeg);
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-.groundWithGrass{  
-  background-image: url(./img/ground-with-grass.jpeg);
+.stone{  
+  background-image: url(./img/stone.jpeg);
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -47,8 +42,13 @@ section{
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.stone{  
-  background-image: url(./img/stone.jpeg);
+.ground{  
+  background-image: url(./img/ground.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.groundWithGrass{  
+  background-image: url(./img/ground-with-grass.jpeg);
   background-repeat: no-repeat;
   background-size: 100%;
 }

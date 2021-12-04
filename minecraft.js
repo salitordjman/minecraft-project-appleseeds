@@ -8,7 +8,6 @@ const axe=document.querySelector(".axe");
 const lastMemory=document.querySelector(".lastMemory");
 const lastMemoryClass=lastMemory.classList;
 const allCube=[];
-
 sky.style.gridTemplateRows= 'repeat(heightQube, 1fr)';
 sky.style.gridTemplateColumns= 'repeat(widthQube, 1fr)';
 
@@ -21,44 +20,68 @@ function printCube(row,startCol,endCol,classIteam){
     cubeImg.style.gridRowStart=row;
     cubeImg.style.gridColumnStart=i;
     allCube.push(cubeImg)
-    // picCube(cubeImg,classIteam)
   }
 }
-function choosetool(toolChoose, otherTool1, otherTool2){
-  picCube()
-  toolChoose.addEventListener("click", function() {
-    if(otherTool1.classList[1]){otherTool1.classList.toggle('backgroundBlue')}
-    if(otherTool2.classList[1]){otherTool2.classList.toggle('backgroundBlue')}
-    if(!(toolChoose.classList[1]==="backgroundBlue")){toolChoose.classList.toggle('backgroundBlue')}
-  })
-}
-console.log(allCube);
-function picCube(){
 
-  if(pickaxe.classList[1]==="backgroundBlue"){
-    for(let i=0;i<allCube.length;i++){
-      if(allCube[i].className==="stone"){
-        allCube[i].addEventListener("click", function() {
-            if(lastMemoryClass[1]){lastMemoryClass.toggle(lastMemoryClass[1])}
-            allCube[i].classList.remove("stone")
-          lastMemoryClass.toggle("stone")
-        })
-
-      }else{
-        allCube[i].addEventListener("click", function() {
-        pickaxe.animate([
-          { background : 'red', border: '2px solid red'},
-          { background : 'red', border: '2px solid red' }
-        ], {
-          duration: 400,
-          iterations: 1
-        });
-      })
+function stickCubeToMenu(typeClass, i){
+  allCube[i].addEventListener("click", function m2() {
+      if(lastMemoryClass[1]){
+        lastMemoryClass.toggle(lastMemoryClass[1])
       }
+      allCube[i].classList.remove(typeClass)
+    lastMemoryClass.toggle(typeClass)
+  })
+  allCube[i].removeEventListener("click", m2);
+}
 
+function calculationPickCube(typeMenu, typeClass, typeClass2){
+  for(let i=0;i<allCube.length;i++){
+    if(allCube[i].className===typeClass){
+      stickCubeToMenu(typeClass, i)
+    }else if(allCube[i].className===typeClass2){
+      stickCubeToMenu(typeClass2, i)
+    }else{
+      allCube[i].addEventListener("click", function m1() {
+        typeMenu.animate([
+            { background : 'red', border: '2px solid red'},
+            { background : 'red', border: '2px solid red' }
+          ], {
+            duration: 250,
+            iterations: 1
+          });
+        })
+        allCube[i].removeEventListener("click", m1);
     }
   }
 }
+
+function picCube(toolChoose){
+  if(toolChoose.classList[0]==="pickaxe"){
+    calculationPickCube(pickaxe, "stone",)
+  } else if(toolChoose.classList[0]==="shovel"){
+    calculationPickCube(shovel, "woodBrown","woodGreen")
+  } else if(toolChoose.classList[0]==="axe"){
+    calculationPickCube(axe, "ground","groundWithGrass")
+  }
+}
+
+function choosetool(toolChoose, otherTool1, otherTool2){
+  toolChoose.addEventListener("click", function m() {
+    if(otherTool1.classList[1]){
+      otherTool1.classList.toggle('backgroundBlue')
+    }
+    if(otherTool2.classList[1]){
+      otherTool2.classList.toggle('backgroundBlue')
+    }
+    if(!(toolChoose.classList[1]==="backgroundBlue")){
+      toolChoose.classList.toggle('backgroundBlue')
+    }
+    picCube(toolChoose)
+    toolChoose.removeEventListener("click", m);
+  })
+}
+
+
 
 
 
