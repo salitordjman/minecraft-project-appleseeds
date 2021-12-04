@@ -1,17 +1,84 @@
+*{
+  max-width: 100vw;
+  max-height: 100vh;
+}
 body{
     display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.zzzz{
+    justify-content: space-between;
 
-  width: 50vw;
-  height: 98vh;
+  }
+section{
+  width: 91%;
+  display: flex;
+  justify-content: center;
+}
+  .sky{
+  width: calc(32.1vh + 32.1vw);
+  height: calc(32.1vh + 32.1vw);
   display: grid;
   background: #8DBFFF;
-  grid-template-rows: repeat(20, 1fr);
-  grid-template-columns: repeat(20, 1fr);
 }
-.snake {
-  background-color: hsl(123, 50%, 51%);
+.menu{
+  background: black;
+  width: 9%;
+  height: 100vh;
+  padding-top: calc(2vh + 2vw);
+}
+.cloud {
+  background-color: white;
+}
+.ground{  
+  background-image: url(./img/ground.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.groundWithGrass{  
+  background-image: url(./img/ground-with-grass.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.woodGreen{  
+  background-image: url(./img/woodGreen.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.woodBrown{  
+  background-image: url(./img/woodBrown.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+.stone{  
+  background-image: url(./img/stone.jpeg);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+img{
+  width: calc(3.5vh + 3.5vw);
+  height: calc(3.5vh + 3.5vw);
+}
+.pickaxe, .shovel, .axe{
+  padding-top: calc(0.2vh + 0.2vw);
+  text-align: center;
+  margin: calc(0.7vh + 0.7vw) calc(1.3vh + 1.3vw);
+  width: calc(3.6vh + 3.6vw);
+  height: calc(4.7vh + 4.7vw);
+  border: 2px solid gray;
+  font-size: calc(0.6vh + 0.6vw);
+  color: white;
+}
+.backgroundBlue{
+  background: blue;
+}
+.pickaxe:hover, .shovel:hover, .axe:hover{
+  background: blue;
+  border: 2px solid blue;
+}
+.lastMemory{
+  margin: calc(0.7vh + 0.7vw) calc(2vh + 2vw);
+  width: calc(2vh + 2vw);
+  height: calc(2vh + 2vw);
+  border: 2px solid white;
+}
+.lastMemory:hover{
+  border: 2px solid blue;
 }
