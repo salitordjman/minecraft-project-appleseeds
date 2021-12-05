@@ -16,13 +16,18 @@ section{
   width: calc(32.1vh + 32.1vw);
   height: calc(32.1vh + 32.1vw);
   display: grid;
-  background: #8DBFFF;
+  /* background: #8DBFFF; */
 }
 .menu{
   background: black;
   width: 9%;
   height: 100vh;
   padding-top: calc(2vh + 2vw);
+}
+
+/* //להוריד בשיטה 1 */
+.blue{
+  background-color: #8DBFFF;
 }
 .cloud {
   background-color: white;
@@ -81,4 +86,32 @@ img{
 }
 .lastMemory:hover{
   border: 2px solid blue;
+}
+button{
+  width: calc(2vh + 2vw);
+  height: calc(1vh + 1vw);
+}
+.btnDiv{
+  margin: calc(4vh + 4vw) calc(2vh + 2vw);
+}
+header{
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(./img/logo_start.jfif);
+  background-repeat: no-repeat;
+  background-size: 100%;
+  /* visibility: hidden; */
+  font-size: calc(3.5vh + 3.5vw);
+  padding: calc(1.5vh + 1.5vw);
+}
+input{
+  font-weight: bold;
+  height: calc(5vh + 5vw);
+  width: 100%;
+  background-color: #ffc400;
+  color: rgb(58, 124, 247);
+  border-radius: 25px;
+  cursor: pointer;
 }
