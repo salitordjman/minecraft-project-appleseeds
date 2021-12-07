@@ -29,6 +29,13 @@ section{
 .blue{
   background-color: #8DBFFF;
 }
+/* .blue, .cloud, .stone, .woodGreen, .woodBrown{
+  background-color: #8DBFFF;
+  border: 1px solid transparent;
+}
+.blue:hover, .cloud:hover, .stone:hover, .woodGreen:hover, .woodBrown:hover{
+  border: 1px solid gray;
+} */
 .cloud {
   background-color: white;
 }
